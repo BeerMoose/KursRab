@@ -1,4 +1,5 @@
 .ditignore
+.txt
 **/.idea
 **/*.iml
 **/*.*~
