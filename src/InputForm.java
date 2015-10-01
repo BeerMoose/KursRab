@@ -117,7 +117,8 @@ public class InputForm extends JFrame {
     }
     public class ButtonReCountX0Listener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            x0 = generateX0();printX0toLogFile();
+            x0 = generateX0();
+            printX0toLogFile();
         }
     }
     //Генерируем х0
