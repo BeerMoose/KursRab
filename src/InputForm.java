@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class InputForm extends JFrame {
-    int width = 600, height = 450;
+    int width = 630, height = 450;
     double eps, beta;
     int n;
     double a, b;
@@ -61,7 +61,7 @@ public class InputForm extends JFrame {
         JLabel labelB = new JLabel("- b");                              labelB.setBounds(330, 30, 45, 20);          labelB.setFont(myFontLabel);    add(labelB);
         JLabel labelSol = new JLabel("Решение:");                     labelSol.setBounds(70, 150, 150, 20);       labelSol.setFont(myFontLabel);    add(labelSol);
 
-        labelLogoMetod = new JLabel();                          labelLogoMetod.setBounds(280, 240, 300, 150);                                       add(labelLogoMetod);
+        labelLogoMetod = new JLabel();                          labelLogoMetod.setBounds(280, 240, 350, 150);                                       add(labelLogoMetod);
         labelAnswer = new JLabel();                                labelAnswer.setBounds(60, 180, 200, 320);   labelAnswer.setFont(myFontAnswer);   add(labelAnswer);
         labelIterTitle = new JLabel("Итераций:");               labelIterTitle.setBounds(280, 150, 300, 20);labelIterTitle.setFont(myFontLabel);    add(labelIterTitle);
         labelIterRes = new JLabel();                              labelIterRes.setBounds(280, 170, 300, 20);  labelIterRes.setFont(myFontLabel);    add(labelIterRes);
@@ -106,7 +106,7 @@ public class InputForm extends JFrame {
             printX0toLogFile();
         }
         flagMetod = comboBox.getSelectedIndex();//Получаем номер выбранного метода
-        labelLogoMetod.setIcon(new ImageIcon(flagMetod+1 + ".png"));//Выводим картинку для метода
+        labelLogoMetod.setIcon(new ImageIcon("img/" + (flagMetod+1) + ".png"));//Выводим картинку для метода
         processResult(new Solution(n, eps, beta, a, b, x0, flagMetod).printAll());//Обрабатываем результаты, которые получили при решении
     }
     //Класс для добавлении функций к кнопке
